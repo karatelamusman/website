@@ -244,7 +244,7 @@ Future<List<Dog>> dogs() async {
   // Query the table for all The Dogs.
   final List<Map<String, dynamic>> maps = await db.query('dogs');
 
-  // Convert the List<Map<String, dynamic> into a List<Dog>.
+  // Convert the List<Map<String, dynamic>> into a List<Dog>.
   return List.generate(maps.length, (i) {
     return Dog(
       id: maps[i]['id'],
